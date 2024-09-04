@@ -47,7 +47,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto;
+    margin: 0 1rem;
     height: 20vh;
     gap:1rem;
 }
@@ -119,3 +119,71 @@ main{
     }
     
 }
+
+
+.dictionaryContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem auto;
+}
+
+.word-title{
+    font-size: 2rem;
+    background-color: #053b75;
+    color: aliceblue;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 1rem auto;
+    width: fit-content;
+}
+
+.meaningsContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0.5rem 1rem;
+    border: #007bff solid 2px;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 3px 3px 1px black;
+}
+
+.meanings{
+    font-size: 2rem;
+    margin: 1rem 0;
+    width: fit-content;
+}
+
+.wordContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto;
+    gap: 1rem;
+}
+
+.phonetic{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    gap: 1rem;
+    font-size: 3rem;
+}
+
+audio{
+    max-width: 300px;
+}
+
+@media screen and (max-width: 500px) {
+    .phonetic {
+         display: block;
+    }
+    .wordContainer{
+        display: block;
+        text-align: center;
+        margin: 1rem;
+    }
+}
+
