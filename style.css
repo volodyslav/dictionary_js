@@ -129,7 +129,7 @@ main{
 }
 
 .word-title{
-    font-size: 2rem;
+    font-size: 3rem;
     background-color: #053b75;
     color: aliceblue;
     padding: 1rem;
@@ -142,17 +142,18 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0.5rem 1rem;
-    border: #007bff solid 2px;
+    margin: 2rem;
+    border: #007bff solid 4px;
     padding: 1rem;
     border-radius: 10px;
-    box-shadow: 0px 3px 3px 1px black;
+    box-shadow: 0px 0px 2px 0px black;
 }
 
 .meanings{
     font-size: 2rem;
     margin: 1rem 0;
     width: fit-content;
+    font-weight: 800;
 }
 
 .wordContainer{
@@ -169,7 +170,15 @@ main{
     justify-content: center;
     margin: auto;
     gap: 1rem;
-    font-size: 3rem;
+}
+
+p{
+    font-size: 1.5rem;
+}
+
+.phonetic p {
+    font-size: 2rem;
+    margin: 0.5rem;
 }
 
 audio{

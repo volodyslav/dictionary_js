@@ -43,10 +43,17 @@ function showResult(result){
     const meaningDiv = document.createElement("div");
     meaningDiv.classList.add("meaningsContainer");  //  Added this line to add a class to the div that contains the meanings.  //
     for (const meaning of result[0].meanings){
-        const mean = document.createElement("p");
-        mean.textContent = meaning.partOfSpeech + ": " + meaning.definitions[0].definition;
-        mean.classList.add("meanings"); 
-        meaningDiv.appendChild(mean);
+        const meanText = document.createElement("p");
+        meanText.textContent = meaning.partOfSpeech + ":";
+        meanText.classList.add("meanings"); 
+        meaningDiv.appendChild(meanText);
+        for (const word of meaning.definitions){
+            const wordText = document.createElement("p");
+            wordText.textContent = "- " + word.definition;
+            meaningDiv.appendChild(wordText);
+        }
+       
+        
     }
     dictionary.appendChild(meaningDiv);
 }
