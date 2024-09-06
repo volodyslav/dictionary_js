@@ -9,15 +9,15 @@ main.appendChild(dictionary);
 searchButton.addEventListener("click", handleSearch);
 
 function handleSearch() {
-    // Clear any existing dictionary before creating a new one.
-    dictionary.innerHTML = ""
-    main.removeChild(dictionary);
-
     const value = searchInput.value.trim().toLowerCase();
     
     console.log(value);
     if (value.length > 1){ // Check size of the input
         loadWord(value); // value
+         // Clear any existing dictionary before creating a new one.
+        dictionary.innerHTML = ""
+        main.removeChild(dictionary);
+
         dictionary.classList.add("dictionaryContainer");
         main.appendChild(dictionary)
     }
@@ -27,11 +27,11 @@ async function loadWord(word){
     try{
         const response = await fetch(API + "" + word)
         if (!response.ok){
-            throw new Error('Network response was not ok');
-        }
-        const data = await response.json(); 
-        console.log(data);
-        showResult(data); 
+            alert("Can't fint the word")
+        }else if (response.ok) {
+            const data = await response.json(); 
+            console.log(data);
+            showResult(data); }
         // Clear the search input field after the search is done.  //  Added this line to clear the search input field after the search is done.  //
         searchInput.value = "" 
     }catch(e){
