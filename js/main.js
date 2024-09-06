@@ -71,10 +71,29 @@ function showResult(results){
         firstDiv.appendChild(resultPhonetics);
         
 
-        
+        const secondDiv = document.createElement("div");
+        secondDiv.classList.add("secondDiv");
+        for (const meaning of result.meanings){ // meanings
+            const partOfSpeech = document.createElement("p");
+            partOfSpeech.classList.add("partOfSpeech");
+            if (meaning.partOfSpeech){ // Check if exists
+                partOfSpeech.textContent = meaning.partOfSpeech;
+            }
+            secondDiv.appendChild(partOfSpeech);
+            
+            for (const def of meaning.definitions){
+                const definition = document.createElement("p");
+                definition.classList.add("definition");
+                if (def.definition){ // Check if exists
+                    definition.textContent = def.definition;
+                }
+                secondDiv.appendChild(definition);
+            }
+        }
 
         // append in div main
         resultDiv.appendChild(firstDiv);
+        resultDiv.appendChild(secondDiv);
         dictionary.appendChild(resultDiv);
     }
 }

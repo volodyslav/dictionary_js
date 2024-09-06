@@ -1,6 +1,8 @@
 :root{
     --primary-background: rgb(237, 237, 237);
     --primary-text: rgb(30, 30, 30);
+
+    --primary-blue: #007bff;
 }
 
 
@@ -42,6 +44,8 @@ main{
     min-height: 100vh;
 }
 
+
+/* Dictionary part */
 
 .search-div{
     display: flex;
@@ -99,13 +103,13 @@ main{
 /* Focus state */
 #searchInput:focus {
     outline: none;
-    border-color: #007bff;
+    border-color: var(--primary-blue);
     box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
 }
 
 /* Hover state */
 #searchInput:hover {
-    border-color: #007bff;
+    border-color: var(--primary-blue);
 }
 
 
@@ -116,8 +120,8 @@ main{
         flex-direction: column;
         gap: 0.5rem;
         margin-top: 1rem;
+        
     }
-    
 }
 
 .dictionaryContainer {
@@ -132,7 +136,7 @@ main{
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    border: solid 2px #007bff;
+    border: solid 2px var(--primary-blue);
     padding: 1rem;
     border-radius: 10px;
     box-shadow: 10px 5px 5px #717274;
@@ -142,7 +146,7 @@ main{
 .resultWord{
     font-size: 2rem;
     font-weight: bold;
-    background-color: #007bff;
+    background-color: var(--primary-blue);
     color: aliceblue;
     padding: 0.5rem;
     border-radius: 5px;
@@ -169,6 +173,7 @@ main{
     .firstDiv{
         flex-direction: column;
         gap: 0.5rem;
+        margin: 0;
     }
     
     .resultPhonetics{
@@ -176,5 +181,24 @@ main{
         gap: 0.5rem;
         max-width: 200px;
     }
-    
+
+    .dictionaryContainer{
+        margin: 0.1rem;
+        margin-top: 1rem;
+    }
+
+    .resultContainer{
+        margin: 1rem 0.1rem;
+    }
+}
+
+/* Second div */
+.partOfSpeech{
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+.definition{
+    margin: 0.5rem;
+    font-size: 1.5rem;
 }
